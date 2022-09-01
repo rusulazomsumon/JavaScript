@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Refresh with JS - RA Sumon</title>
+    <title>JS Fundamental Concepts - RA Sumon</title>
     <link rel="stylesheet" href="/tic&Tricks/JsHotConcepts/style.css">
+
+    <style>
+        h5 {
+            text-decoration: underline;
+        }
+        pre code {
+            color: #867C3B;
+            background-color: #221A0F;
+            border: 1px solid #999;
+            display: block;
+            padding: 10px;
+        }
+        
+    </style>
 </head>
 <body>
-    <h3> Importent JavaScript Fundamental Concepts </h3>
+    <h1> Importent JavaScript Fundamental Concepts </h1>
+    <h5>Topic Covered</h5>
     <ol>
         <li>map() & filter()</li>
         <li>slice() & splice()</li>
@@ -19,19 +34,67 @@
         <li>Promises</li>
     </ol>
     <!-- html -->
+    <div class="BodyCodes">
+        <section class="python-variable">
+            <h2>01. map() & filter()</h2>
+            <p>Return a new array</p>
+            <h5>map()</h5>
+            <pre>
+                <code>
+                    // ****************** map() *****************
+
+                    const DATA = [
+                         {id: 1, title: 'first'},
+                         {id: 2, title: 'second'},
+                         {id: 3, title: 'third'},
+                         {id: 4, title: 'fourth'}
+                     ]
+                     const UpperData = DATA.map(el => el.title.toUpperCase())
+                     console.table(UpperData)
+                     const moduloData = DATA.filter(el => el.id%2 === 0)
+                     console.table(moduloData)
+                    
+                </code>
+            </pre>
+            <h5>Console Output:</h5>
+            <div class="outSs">
+                <img src="./media/Screenshot_46.png" alt="mapping">
+            </div>
+            <!-- ***** filter ******* -->
+            <h5>filter()</h5>
+            <pre>
+                <code>
+                    // ****************** map() *****************
+
+                    const DATA = [
+                        {id: 1, title: 'first'},
+                        {id: 2, title: 'second'},
+                        {id: 3, title: 'third'},
+                        {id: 4, title: 'fourth'}
+                    ]
+                    
+                    const oddData = DATA.filter(el => el.id%2 === 1)
+                    console.table(oddData)
+
+                </code>
+            </pre>
+            <h5>Console Output:</h5>
+            <div class="outSs">
+                <img src="./media/Screenshot_47.png" alt="filter">
+            </div>
+        </section>
+    </div>
 </body>
 <script>
     // ****************** map() & filter() *****************
-    // const DATA = [
-    //     {id: 1, title: 'first'},
-    //     {id: 2, title: 'second'},
-    //     {id: 3, title: 'third'},
-    //     {id: 4, title: 'fourth'}
-    // ]
-    // const UpperData = DATA.map(el => el.title.toUpperCase())
-    // console.table(UpperData)
-    // const moduloData = DATA.filter(el => el.id%2 === 0)
-    // console.table(moduloData)
+    const DATA = [
+        {id: 1, title: 'first'},
+        {id: 2, title: 'second'},
+        {id: 3, title: 'third'},
+        {id: 4, title: 'fourth'}
+    ]
+    const oddData = DATA.filter(el => el.id%2 === 1)
+    console.table(oddData)
 
     // ****************** slice() & splice() *****************
 

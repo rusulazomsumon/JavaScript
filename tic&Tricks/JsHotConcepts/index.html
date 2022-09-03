@@ -99,6 +99,32 @@
 
     // ****************** slice() & splice() *****************
 
+     // ****************** promises *****************
+
+            let car = new Promise(function(resolve,reject){
+
+        fuel_fullTank = true;
+
+                if(fuel_fullTank)
+
+                resolve()
+
+            else
+
+                        reject()
+
+                    });
+
+        car.then(function(){
+
+            document.write("The fuel tank is full. Happy Driving!!")
+
+        }).catch(function(){
+
+                    document.write("The fuel tank is not empty.")
+
+        })
+
 </script>
 <script src="/tic&Tricks//JsHotConcepts/main.js"></script>
 </html>

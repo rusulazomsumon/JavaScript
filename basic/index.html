@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basic Concepts - RA Sumon</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        h5 {
+            text-decoration: underline;
+        }
+        pre code {
+            color: #867C3B;
+            background-color: #221A0F;
+            border: 1px solid #999;
+            display: block;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1> JavaScript Basic Concepts </h1>
+    <h5>Topic Covered</h5>
+    <ol>
+        <li>Printing a arry as HTML List</li>
+    </ol>
+    <!-- html -->
+    <div class="BodyCodes">
+        <section class="python-variable">
+            <h2>1. Printing a arry as HTML List</h2>
+            <p>Prinitng JS for Loop in HTML</p>
+            <h5>for() loop</h5>
+            <pre>
+                <code>
+                    
+                    // ****************** JavaScript *****************
+                   
+                    let names = ["Rusul","Azom","Sumon","Samu","Babu"]
+                    let list = document.getElementById("lst");
+
+                    names.forEach((nam) => {
+                        let li = document.createElement("li");
+                        li.innerText = nam;
+
+                        list.appendChild(li);
+                    });
+                    
+                </code>
+            </pre>
+            <h5> Output:</h5>
+            <p>My Names Are:</p>
+            <ol id="lst"></ol>
+        </section>
+    </div>
+</body>
+<script>
+    let names = ["Rusul","Azom","Sumon","Samu","Babu"]
+    let list = document.getElementById("lst");
+
+    names.forEach((nam) => {
+        let li = document.createElement("li");
+        li.innerText = nam;
+
+        list.appendChild(li);
+    });
+</script>
+<script src="/tic&Tricks//JsHotConcepts/main.js"></script>
+</html>

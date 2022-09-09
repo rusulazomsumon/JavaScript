@@ -22,17 +22,20 @@
     </style>
 </head>
 <body>
-    <h1> JavaScript Basic Concepts </h1>
-    <h5>Topic Covered</h5>
-    <ol>
-        <li>Printing a arry as HTML List</li>
-    </ol>
-    <!-- html -->
+    <div class="headerSec">
+        <h1> JavaScript Basic Concepts </h1>
+        <h5>Topic Covered</h5>
+        <ol>
+            <li>Printing a arry as HTML List</li>
+        </ol>
+    </div>
+    <!-- ************************************************** -->
+    <!-- Topic1: printing an array in html -->
     <div class="BodyCodes">
         <section class="python-variable">
             <h2>1. Printing a arry as HTML List</h2>
             <p>Prinitng JS for Loop in HTML</p>
-            <h5>for() loop</h5>
+            <h5>forEach() loop</h5>
             <pre>
                 <code>
                     
@@ -55,8 +58,37 @@
             <ol id="lst"></ol>
         </section>
     </div>
+
+    <!-- ************************************************** -->
+    <!-- Topic1: printing a Objects in html -->
+    <div class="BodyCodes">
+        <section class="python-variable">
+            <h2>2. Printing a Object inside HTML</h2>
+            <pre>
+                <code>
+                    
+                    // ****************** JavaScript *****************
+                   
+                    let names = ["Rusul","Azom","Sumon","Samu","Babu"]
+                    let list = document.getElementById("lst");
+
+                    names.forEach((nam) => {
+                        let li = document.createElement("li");
+                        li.innerText = nam;
+
+                        list.appendChild(li);
+                    });
+                    
+                </code>
+            </pre>
+            <h5> Output:</h5>
+            <p>Know About Me:</p>
+            <p id="raInfo"></p>
+        </section>
+    </div>
 </body>
 <script>
+    // Topic 1: printing array 
     let names = ["Rusul","Azom","Sumon","Samu","Babu"]
     let list = document.getElementById("lst");
 
@@ -66,6 +98,23 @@
 
         list.appendChild(li);
     });
+
+    // Topic 2: printing Objects
+    const rusulAzom = {
+        fName: "Rusul",
+        lName: "Azom",
+        sex: "Male",
+        age: 24,
+        phone: "01882834071",
+        mail: "rusulazomsumon@gmail.com"
+    };
+
+    let fullInfo = " ";
+    for(let info in rusulAzom){
+        fullInfo += rusulAzom[info]+" ";
+    };
+    document.getElementById("raInfo").innerHTML = fullInfo;
+
 </script>
 <script src="/tic&Tricks//JsHotConcepts/main.js"></script>
 </html>

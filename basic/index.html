@@ -60,7 +60,35 @@
     </div>
 
     <!-- ************************************************** -->
-    <!-- Topic1: printing a Objects in html -->
+    <!-- Topic2: printing a Objects in html -->
+    <div class="BodyCodes">
+        <section class="python-variable">
+            <h2>2. Printing a Object inside HTML</h2>
+            <pre>
+                <code>
+                    
+                    // ****************** JavaScript *****************
+                   
+                    let names = ["Rusul","Azom","Sumon","Samu","Babu"]
+                    let list = document.getElementById("lst");
+
+                    names.forEach((nam) => {
+                        let li = document.createElement("li");
+                        li.innerText = nam;
+
+                        list.appendChild(li);
+                    });
+                    
+                </code>
+            </pre>
+            <h5> Output:</h5>
+            <p>Know About Me:</p>
+            <p id="raInfo"></p>
+        </section>
+    </div>
+
+    <!-- ************************************************** -->
+    <!-- Topic2: printing a Objects in html -->
     <div class="BodyCodes">
         <section class="python-variable">
             <h2>2. Printing a Object inside HTML</h2>
@@ -115,6 +143,7 @@
     };
     document.getElementById("raInfo").innerHTML = fullInfo;
 
+    // Topic 3: 
 </script>
 <script src="/tic&Tricks//JsHotConcepts/main.js"></script>
 </html>
